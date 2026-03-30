@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Html tables for Activity" />
+    <meta name="keywords" content="HTML, CSS, Tables" />
+    <meta name="author" content="joão Germano" />
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script>
+    function atualizarRelogio() {
+      const agora = new Date();
+      const horas = String(agora.getHours()).padStart(2, "0");
+      const minutos = String(agora.getMinutes()).padStart(2, "0");
+      const segundos = String(agora.getSeconds()).padStart(2, "0");
+
+      document.getElementById("relogio").innerText =
+        `${horas}:${minutos}:${segundos}`;
+    }
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+    function toggleTabela() {
+      const sidebar = document.getElementById("minhaSidebar");
+      // Adiciona ou remove a classe 'aberta' ao clicar
+      sidebar.classList.toggle("aberta");
+    }
+  </script>
+  <body>
+    <center>
+      <h1 id="relogio">00:00:00</h1>
+    </center>
+    <div class="sidebar-tabela" id="minhaSidebar">
+      <button class="btn-toggle" onclick="toggleTabela()"></button>
+      <table border="5">
+        <tr>
+          <td colspan="3" align="center">A História do Linux</td>
+
+          <td align="center">
+            <img src="imagens/Tux.ico" alt="Imagem1" height="75PX" />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">Ubuntu</td>
+          <td align="center">OpenSuse</td>
+          <td align="center">RedHat</td>
+          <td align="center">Debian</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">Vazia</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="3">
+            <img src="imagens/lili.jpg" alt="Imagem2" height="200PX" />
+          </td>
+
+          <td align="center">Fedora</td>
+        </tr>
+        <tr>
+          <td align="center">Mint</td>
+        </tr>
+        <tr>
+          <td align="center">Zorin</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">Vazia</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">Vazia</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">Vazia</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
