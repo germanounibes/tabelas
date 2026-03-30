@@ -3,10 +3,10 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-      ::selection {
-        background-color: #9e3f5f;
-        color: #ffffff;
-    }
+  ::selection {
+    background-color: #9e3f5f;
+    color: #ffffff;
+  }
 }
 a {
   color: white;
@@ -27,37 +27,34 @@ td {
   border: 1px solid #ddd;
   padding: 8px;
 }
-/* Container lateral (Sidebar) */
+
 .sidebar-tabela {
   position: fixed;
-  left: -400px; /* Esconde a tabela fora da tela à esquerda */
+  left: -400px;
   top: 0;
   width: 300px;
   height: 100%;
-  transition: left 0.4s ease; /* Efeito de deslizamento suave */
+  transition: left 0.4s ease;
   padding: 20px;
   z-index: 1000;
 }
 
-/* Classe que será adicionada pelo JS para mostrar a tabela */
 .sidebar-tabela.aberta {
   left: 0;
 }
 
-/* Botão posicionado na borda da tabela */
 .btn-toggle {
   position: absolute;
-  right: -105px; /* Posiciona o botão para fora do pa  inel lateral */
-  top:43%;
+  right: -105px;
+  top: 43%;
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background: radial-gradient( rgb(255, 204, 184), transparent, transparent);
+  background: radial-gradient(rgb(255, 204, 184), transparent, transparent);
   border: none;
   border-radius: 100%;
 }
 
-/* Estilização básica da tabela */
 table {
   width: 100%;
   border-collapse: collapse;
