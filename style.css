@@ -52,7 +52,7 @@ td {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  background: radial-gradient( rgb(255, 255, 255), transparent, transparent);
+  background: radial-gradient( rgb(255, 204, 184), transparent, transparent);
   border: none;
   border-radius: 100%;
 }
