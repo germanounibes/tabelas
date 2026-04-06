@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <script>
-    // 1. Liste os caminhos das suas imagens
 const imagens = [
     'imagens/1.jpg',
     'imagens/2.jpg',
@@ -25,14 +24,11 @@ const imagens = [
 ];
 
 function mudarFundo() {
-    // 2. Gera um número aleatório entre 0 e o tamanho da lista
     const indiceAleatorio = Math.floor(Math.random() * imagens.length);
     
-    // 3. Aplica a imagem ao estilo do corpo (body)
     document.body.style.backgroundImage = `url('${imagens[indiceAleatorio]}')`;
 }
 
-// Executa a função ao carregar a página
 window.onload = mudarFundo;
 
     function atualizarRelogio() {
@@ -48,7 +44,6 @@ window.onload = mudarFundo;
     atualizarRelogio();
     function toggleTabela() {
       const sidebar = document.getElementById("minhaSidebar");
-      // Adiciona ou remove a classe 'aberta' ao clicar
       sidebar.classList.toggle("aberta");
     }
   </script>
