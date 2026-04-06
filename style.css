@@ -4,8 +4,8 @@ body {
   margin: 0;
   overflow: hidden;
   ::selection {
-    background-color: #9e3f5f;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
   }
 }
 a {
@@ -23,7 +23,7 @@ td {
 }
 th,
 td {
-  background-color: rgba(240, 47, 79, 0.562);
+  background-color: rgba(255, 255, 255, 0.055);
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -61,10 +61,10 @@ table {
   margin-top: 50px;
 }
 body {
-  background-image: url("imagens/lo-fi.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: background-image 0.5s ease-in-out; /* Transição suave */
   height: 100vh;
   color: rgb(255, 255, 255);
   font-family: cursive;

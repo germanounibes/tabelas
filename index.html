@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <script>
+    // 1. Liste os caminhos das suas imagens
+const imagens = [
+    'imagens/1.jpg',
+    'imagens/2.jpg',
+    'imagens/3.png',
+    'imagens/4.jpg',
+    'imagens/5.jpg',
+    'imagens/6.jpg',
+    'imagens/7.jpg',
+    'imagens/8.png',
+    'imagens/9.jpg',
+    'imagens/10.jpg',
+];
+
+function mudarFundo() {
+    // 2. Gera um número aleatório entre 0 e o tamanho da lista
+    const indiceAleatorio = Math.floor(Math.random() * imagens.length);
+    
+    // 3. Aplica a imagem ao estilo do corpo (body)
+    document.body.style.backgroundImage = `url('${imagens[indiceAleatorio]}')`;
+}
+
+// Executa a função ao carregar a página
+window.onload = mudarFundo;
+
     function atualizarRelogio() {
       const agora = new Date();
       const horas = String(agora.getHours()).padStart(2, "0");
