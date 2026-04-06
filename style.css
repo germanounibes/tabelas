@@ -23,7 +23,7 @@ td {
 }
 th,
 td {
-  background-color: rgba(255, 255, 255, 0.055);
+  background-color: rgba(255, 255, 255, 0.158);
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -53,6 +53,11 @@ td {
   background: radial-gradient(rgb(255, 204, 184), transparent, transparent);
   border: none;
   border-radius: 100%;
+  transition: all 0.5s ease;
+}
+.btn-toggle:hover{
+    transform: scale(2); 
+    filter: brightness(1.2);
 }
 
 table {
@@ -71,3 +76,13 @@ body {
   text-shadow: 5px 5px 5px rgb(0, 0, 0);
   padding: 1px;
 }
+a{
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+a:hover{
+color: rgb(0, 0, 0);
+transform: scale(2);
+}
+
