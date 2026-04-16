@@ -1,238 +1,140 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Html tables for Activity" />
+    <meta name="keywords" content="HTML, CSS, Tables" />
+    <meta name="author" content="joão Germano" />
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script>
+    const imagens = [
+      "imagens/1.jpg",
+      "imagens/2.jpg",
+      "imagens/3.png",
+      "imagens/4.jpg",
+      "imagens/5.jpg",
+      "imagens/6.jpg",
+      "imagens/7.jpg",
+      "imagens/8.png",
+      "imagens/9.jpg",
+      "imagens/10.jpg",
+    ];
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duelos OS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    function mudarFundo() {
+      const indiceAleatorio = Math.floor(Math.random() * imagens.length);
 
-<body><center>
-    <u><h1>Duelos entre os sistemas operacionais</h1></u>
-    <h3>Sistemas Operacionais</h3>
-<table border="5" style="width: 100%; height: 100%;">
-  <tr><td colspan="3" align="center">1º Duelo</td></tr>
+      document.body.style.backgroundImage = `url('${imagens[indiceAleatorio]}')`;
+    }
+
+    window.onload = mudarFundo;
+
+    function atualizarRelogio() {
+      const agora = new Date();
+      const horas = String(agora.getHours()).padStart(2, "0");
+      const minutos = String(agora.getMinutes()).padStart(2, "0");
+      const segundos = String(agora.getSeconds()).padStart(2, "0");
+
+      document.getElementById("relogio").innerText =
+        `${horas}:${minutos}:${segundos}`;
+    }
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+    function toggleTabela() {
+      const sidebar = document.getElementById("minhaSidebar");
+      sidebar.classList.toggle("aberta");
+    }
+  </script>
+  <body>
+    <center>
+      <h1 id="relogio">00:00:00</h1>
+    </center>
+    <div class="sidebar-tabela" id="minhaSidebar">
+      <button class="btn-toggle" onclick="toggleTabela()"></button>
+      <table border="5">
+        <tr>
+          <td colspan="3" align="center">A História do Linux</td>
+
+          <td align="center">
+            <img src="imagens/Tux.ico" alt="Imagem1" height="75PX" />
+          </td>
+        </tr>
         <tr>
           <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fedora_logo.svg/1280px-Fedora_logo.svg.png" alt="fedora" width="120px" title="Fedora">
-          </td>
-          <td rowspan="2" align="center">X
+            <a
+              href="https://youtu.be/fuK_yGYnmtI?si=OdY__3gGt89rRzU1"
+              target="_blank"
+              >Ubuntu</a
+            >
           </td>
           <td align="center">
-            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/debian-logo-icon.png" alt="debian" width="120px" title="Debian">
+            <a
+              href="https://youtu.be/V-oIMSYY2D4?si=GKFuhxi1XQn3znFT"
+              target="_blank"
+              >OpenSuse</a
+            >
+          </td>
+          <td align="center">
+            <a
+              href="https://youtu.be/QRb7kgjuJ0g?si=A7jdLtAWk2mJNMnO"
+              target="_blank"
+              >RedHat</a
+            >
+          </td>
+          <td align="center">
+            <a
+              href="https://youtu.be/jlI3S0q5odk?si=BEHpU_BNs4X_B_E7"
+              target="_blank"
+              >Debian</a
+            >
           </td>
         </tr>
-                <tr>
-          <td align="center">
-            <p>O Fedora Linux é uma distribuição Linux moderna, segura e de código aberto, conhecida por ser a "vitrine" de novas tecnologias no mundo open source. Patrocinado pela Red Hat, ele oferece um ambiente inovador, estável e atualizado, sendo amplamente utilizado por desenvolvedores e profissionais de TI. </p>
+        <tr>
+          <td colspan="4" align="center">Vazia</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="3">
+            <img src="imagens/lili.jpg" alt="Imagem2" height="200PX" style="border-radius: 5%;"/>
           </td>
+
           <td align="center">
-            <p>O Debian é um sistema operacional livre, focado na estabilidade e segurança. Composto por softwares de código aberto (GNU), é reconhecido por sua robustez em servidores e flexibilidade em desktops. Utiliza o poderoso gerenciador de pacotes APT, facilitando a instalação e atualização. É a base de diversas distribuições famosas, como o Ubuntu, priorizando sempre a liberdade do usuário.</p>
-            <p></p>
+            <a
+              href="https://youtu.be/2Mr_MXSLeYY?si=UeTcQFrEkFhhnw5_"
+              target="_blank"
+              >Fedora</a
+            >
           </td>
         </tr>
-
-
-
-          <tr><td colspan="3" align="center">2º Duelo</td></tr>
         <tr>
           <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Ubuntu_logoib.svg/1280px-Ubuntu_logoib.svg.png" alt="ubuntu" width="120px" title="ubuntu">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/3840px-Arch_Linux_%22Crystal%22_icon.svg.png" alt="arch" width="120px" title="arch">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>O Ubuntu é uma das distribuições Linux mais populares do mundo, baseada em Debian. Focado em facilidade de uso, é gratuito, de código aberto e ideal para desktops, servidores e nuvem. Oferece alta segurança, estabilidade e uma enorme comunidade de suporte. É a escolha perfeita para iniciantes e profissionais, trazendo softwares modernos e interface amigável.</p>
-          </td>
-          <td align="center">
-            <p>Arch Linux é uma distribuição Linux leve e flexível, focada na simplicidade ("Keep It Simple, Stupid") e no controle total pelo usuário. Utiliza o gerenciador de pacotes Pacman, segue o modelo rolling release e destaca-se pelo Arch Wiki. Ideal para quem deseja customização e aprendizado.</p>
+            <a
+              href="https://youtu.be/tQRo71hdaRQ?si=wxKZe1S7U_bnNiRS"
+              target="_blank"
+              >Mint</a
+            >
           </td>
         </tr>
-
-
-
-          <tr><td colspan="3" align="center">3º Duelo</td></tr>
         <tr>
           <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/3840px-Linux_Mint_logo_without_wordmark.svg.png" alt="mint" width="120px" title="mint">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Zorin_OS.svg/3840px-Zorin_OS.svg.png" alt="zorin" width="120px" title="zorin">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>O Linux Mint é uma distribuição baseada no Ubuntu, focada em facilidade de uso e elegância. Ideal para iniciantes, oferece uma interface clássica (Cinnamon) similar ao Windows. É estável, leve, seguro e já vem com softwares essenciais prontos para uso.
-Linux Mint Brasil
-</p>
-          </td>
-          <td align="center">
-            <p>O Zorin OS é uma distribuição Linux elegante e fácil de usar, ideal para iniciantes e usuários vindo do Windows/macOS. Focado em performance e segurança, ele oferece um visual moderno, alta personalização e a ferramenta "Zorin Connect". Seguro, leve e fluido.</p>
+            <a
+              href="https://youtu.be/myGS1M7DmIc?si=bmI8HDw_n2v-UeHK"
+              target="_blank"
+              >Zorin</a
+            >
           </td>
         </tr>
-
-
-
-          <tr><td colspan="3" align="center">4º Duelo</td></tr>
         <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/it/archive/d/de/20181102134907%21MacOS_Sierra_logo.png" alt="sierra" width="120px" title="sierra">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/it/0/0f/MacOS_Big_Sur_logo.png" alt="big sur" width="120px" title="big sur">
-          </td>
+          <td colspan="4" align="center">Vazia</td>
         </tr>
-                <tr>
-          <td align="center">
-            <p>O macOS Sierra (10.12), lançado em 2016, trouxe a Siri ao Mac, facilitando buscas e comandos. Introduziu o desbloqueio com Apple Watch, área de transferência universal entre dispositivos Apple, e a otimização de armazenamento no iCloud. Marcou a transição definitiva para apps 64-bit.</p>
-          </td>
-          <td align="center">
-            <p>O macOS Big Sur trouxe um redesenho visual profundo, com ícones estilo iOS, nova Central de Controle e Safari mais rápido. Focado na arquitetura Apple Silicon, refinou a interface, melhorou a privacidade e o app Mensagens. É uma evolução marcante que aproxima o Mac dos dispositivos móveis.</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">5º Duelo</td></tr>
         <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/it/5/5b/MacOS_Mojave_logo.png" alt="mojave" width="120px" title="mojave">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/MacOS_Monterey_logo.png" alt="monterey" width="120px" title="monterey">
-          </td>
+          <td colspan="4" align="center">Vazia</td>
         </tr>
-                <tr>
-          <td align="center">
-            <p>O macOS Mojave (10.14) trouxe o aguardado Modo Escuro, pilhas organizadoras na mesa e a Mac App Store redesenhada. Lançado em 2018, focou em produtividade com o Finder aprimorado, capturas de tela avançadas e continuidade na câmera. Foi a última versão compatível com apps 32-bit.</p>
-          </td>
-          <td align="center">
-            <p>O macOS Monterey elevou a produtividade com o Controle Universal, permitindo usar um mouse/teclado entre Mac e iPad. Destaca o FaceTime aprimorado (SharePlay), Modo Foco, Safari redesenhado e o atalho Atalhos no Mac. Ele integra ainda mais o ecossistema Apple com o AirPlay para Mac.</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">6º Duelo</td></tr>
         <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/it/9/94/MacOS_Catalina_logo.png" alt="catalina" width="120px" title="catalina">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/it/archive/e/e2/20230401210836%21MacOS_Ventura_logo.png" alt="ventura" width="120px" title="ventura">
-          </td>
+          <td colspan="4" align="center">Vazia</td>
         </tr>
-                <tr>
-          <td align="center">
-            <p>O macOS Catalina (10.15) marcou o fim dos apps 32-bit, focando em 64-bit e maior segurança. Trouxe o Sidecar (iPad como tela), dividiu o iTunes em Música, Podcasts e TV, e introduziu o "Buscar" offline. Aumentou a integração com Apple Watch e o Screen Time, com suporte a apps de iPad no Mac.</p>
-          </td>
-          <td align="center">
-            <p>O macOS Ventura traz recursos focados em produtividade e integração. Destaques para o Palco Central (Stage Manager) que organiza apps automaticamente, a Câmera de Continuidade (usar iPhone como webcam) e o Compartilhamento no Safari. O app Mail foi aprimorado e o sistema recebeu um visual mais moderno [Apple].</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">7º Duelo</td></tr>
-        <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Logo_%281992-2001%29.svg" alt="windows 98" width="120px" title="windows 98">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Windows_logo_-_2012_%28blue-purple%29.svg/960px-Windows_logo_-_2012_%28blue-purple%29.svg.png" alt="windows 8" width="120px" title="windows 8">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>O Windows 98, lançado em 1998, foi um marco na integração com a internet, trazendo o Internet Explorer 4.0 nativo e a barra de tarefas Active Desktop. Consolidou o suporte USB e Plug-and-Play, tornando o hardware mais acessível, além de introduzir o sistema de arquivos FAT32.</p>
-          </td>
-          <td align="center">
-            <p>O Windows 8, lançado em 2012, marcou uma revolução radical na interface da Microsoft, focando em telas sensíveis ao toque com o design "Metro" e a tela Inicial com blocos dinâmicos. Removeu o menu Iniciar clássico, gerando controvérsia. Focado em tablets/híbridos, foi sucedido pelo 8.1.</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">8º Duelo</td></tr>
-        <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Unofficial_Windows_logo_variant_-_2002%E2%80%932012_%28Multicolored%29.svg/250px-Unofficial_Windows_logo_variant_-_2002%E2%80%932012_%28Multicolored%29.svg.png" alt="windows xp" width="120px" title="windows xp">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/960px-Windows_logo_-_2012.svg.png" alt="windows 10" width="120px" title="windows 10">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>Lançado em 2001, o Windows XP revolucionou com sua interface colorida e estabilidade baseada em NT. Unificou as linhas doméstica e profissional da Microsoft, tornando-se um marco com o Menu Iniciar verde e barra de tarefas azul. Ícone da computação, durou até 2014.</p>
-          </td>
-          <td align="center">
-            <p>O Windows 10 consolidou-se como um sistema operacional robusto e versátil, unindo a familiaridade do menu Iniciar a recursos modernos. Focado em produtividade, trouxe a assistente Cortana, navegador Edge, múltiplas áreas de trabalho e atualizações contínuas para segurança e desempenho.</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">9º Duelo</td></tr>
-        <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/e/e0/Windows_logo.png" alt="windows 7" width="120px" title="windows 7">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Windows_logo_-_2021.svg/500px-Windows_logo_-_2021.svg.png" alt="windows 11" width="120px" title="windows 11">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>Lançado em 2009, o Windows 7 marcou a redenção da Microsoft após o Vista. Focado em desempenho, trouxe uma interface Aero refinada, barra de tarefas funcional (Superbar) e maior estabilidade. Foi aclamado pela velocidade e facilidade de uso, tornando-se um dos sistemas mais populares da história. </p>
-          </td>
-          <td align="center">
-            <p>O Windows 11 traz um design moderno, com menu Iniciar centralizado e cantos arredondados. Focado em produtividade, oferece Snap Layouts para organizar janelas, integração profunda com IA (Copilot) e melhor desempenho para jogos. Mais seguro e fluido, ideal para trabalho híbrido.</p>
-          </td>
-        </tr>
-
-
-
-          <tr><td colspan="3" align="center">10º Duelo</td></tr>
-        <tr>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Kali-dragon-icon.svg/1280px-Kali-dragon-icon.svg.png" alt="kali" width="120px" title="kali">
-          </td>
-          <td rowspan="2" align="center">X
-          </td>
-          <td align="center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/OpenSUSE_Button.svg" alt="opensuse" width="120px" title="opensuse">
-          </td>
-        </tr>
-                <tr>
-          <td align="center">
-            <p>Kali Linux é uma distribuição baseada em Debian voltada para segurança da informação, testes de penetração e auditoria. Vem com centenas de ferramentas pré-instaladas, como Nmap e Wireshark. É amplamente usada por profissionais de hacking ético e forense digital.</p>
-          </td>
-          <td align="center">
-            <p>O openSUSE é uma distribuição Linux estável e versátil, ideal para iniciantes e profissionais. Destaca-se pelo YaST, uma ferramenta gráfica centralizada que facilita a configuração do sistema. Oferece duas versões: Leap (estável) e Tumbleweed (rolling release).</p>
-          </td>
-        </tr></table>
-        <footer><h2>João Germano</h2><h3>Turma G</h3></footer>
-</center></body>
-
+      </table>
+    </div>
+  </body>
 </html>

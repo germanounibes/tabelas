@@ -1,23 +1,19 @@
-img {
-margin: 2%;
-transition: all 0.5s ease;
-filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5)); 	
-}
-img:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.1) drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
-}
+html,
 body {
-  background-image: url('imagens/wallpaper.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  height: 100vh;
-  color: rgb(255, 255, 255);
-  font-family: cursive;
-  text-shadow: 5px 5px 5px rgb(0, 0, 0);
-  padding: 1px;
-  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  ::selection {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+a {
+  color: white;
+}
+h1 {
+  margin: 0;
+  font-size: 800%;
 }
 table,
 th,
@@ -31,9 +27,62 @@ td {
   border: 2px solid rgba(255, 255, 255, 0.315);
   padding: 8px;
 }
-h2 {
-  text-shadow: 2px 2px 5px black;
+
+.sidebar-tabela {
+  position: fixed;
+  left: -400px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  transition: left 0.4s ease;
+  padding: 20px;
+  z-index: 1000;
 }
-h1 {
-  text-shadow: 2px 2px 5px black;
-};
+
+.sidebar-tabela.aberta {
+  left: 0;
+}
+
+.btn-toggle {
+  position: absolute;
+  right: -105px;
+  top: 43%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: radial-gradient(rgb(255, 204, 184), transparent, transparent);
+  border: none;
+  border-radius: 100%;
+  transition: all 0.5s ease;
+}
+.btn-toggle:hover{
+    transform: scale(2); 
+    filter: brightness(1.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out; /* Transição suave */
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding: 1px;
+}
+a{
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+a:hover{
+color: rgb(0, 0, 0);
+transform: scale(2);
+}
+
